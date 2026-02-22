@@ -1,0 +1,22 @@
+# Config file for the INSTALLED package
+# Allow other CMake projects to find this package if it is installed
+# Requires the use of the standard CMake module CMakePackageConfigHelpers
+
+set ( @CMAKE_PROJECT_NAME@_VERSION @VERSION@ )
+
+set ( @CMAKE_PROJECT_NAME@_FOUND TRUE )
+
+find_path( @CMAKE_PROJECT_NAME@_INCLUDE_DIRS
+    NAMES "atomlib.mod"
+    HINTS "@INSTALL_INCLUDEDIR@"
+)
+
+find_library( @CMAKE_PROJECT_NAME@_LIBRARIES
+    NAMES @CMAKE_PROJECT_NAME@ lib@CMAKE_PROJECT_NAME@
+    HINTS "@INSTALL_LIBDIR@"
+)
+
+find_library( @CMAKE_PROJECT_NAME@_STATIC_LIBRARIES
+    NAMES "lib@CMAKE_PROJECT_NAME@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+    HINTS "@INSTALL_LIBDIR@"
+)
