@@ -6,6 +6,9 @@
 
 The atomlib is a modern Fortran library consisting of useful utilities and functions that a computer chemist might need during his/her work. It uses an object-oriented philosophy for reading and storing data for analysis. Works nicely together with [xslib](https://github.com/JureCerar/xslib) standard library. The library is written with primary purpose of learning modern Fortran language, good coding practices, and in hopes that it someday helps someone else in their pursuit of knowledge.
 
+> [!NOTE]
+> For a new version I plan to completely rebuild the repository (from ground up). I plan to switch to [fpm](https://github.com/fortran-lang/fpm) for building and [FORD](https://github.com/Fortran-FOSS-Programmers/ford) for documentation. I also plan to expand supported molecular files, revamp how the package works to make it much easier to use, implement selection, and put more focus on tools for file analysis. Overall plan is to make it more similar to [MDAnalysis](https://github.com/MDAnalysis/mdanalysis) or [mdtraj](https://github.com/mdtraj/mdtraj) but in Fortran.
+
 ## Build & Install
 For latest build clone repository from GitHub (or download other [releases](https://github.com/JureCerar/xslib/releases)):
 ```bash
